@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dtewcv14k44hq"]
 
-[ext_resource type="Script" uid="uid://bkhsf6jge7h3i" path="res://node.gd" id="1_2dftf"]
+[ext_resource type="Script" uid="uid://b84f2xt3ho8tl" path="res://script.gd" id="1_js7pq"]
 [ext_resource type="PackedScene" uid="uid://cqm38kayx462i" path="res://objects/caixa.tscn" id="2_bcbcq"]
 [ext_resource type="PackedScene" uid="uid://be4mkn2dg7iaj" path="res://objects/caixa2.tscn" id="3_js7pq"]
 [ext_resource type="PackedScene" uid="uid://dm3kfk2hi7yl8" path="res://objects/caixa1.tscn" id="4_js7pq"]
@@ -19,7 +19,7 @@ b = Vector2(-23, 115)
 [node name="Mundo" type="Node2D"]
 
 [node name="Node" type="Node" parent="."]
-script = ExtResource("1_2dftf")
+script = ExtResource("1_js7pq")
 object_templates = Array[PackedScene]([ExtResource("4_js7pq"), ExtResource("3_js7pq"), ExtResource("2_bcbcq")])
 
 [node name="ColorRect" type="ColorRect" parent="."]
