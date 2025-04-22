@@ -1,17 +1,26 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://5307m60wu546"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://5307m60wu546"]
 
 [ext_resource type="Texture2D" uid="uid://dvkd88kvc61a" path="res://pack-industrial/Tilesheet/platformerPack_industrial_tilesheet.png" id="1_g2hbc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g2hbc"]
+friction = 0.5
+bounce = 0.16
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hhvbn"]
 texture = ExtResource("1_g2hbc")
 texture_region_size = Vector2i(70, 70)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
 4:0/0 = 0
 5:0/0 = 0
 6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, 35, 35, -35, 35, 35)
 7:0/0 = 0
 8:0/0 = 0
 9:0/0 = 0
@@ -42,7 +51,9 @@ texture_region_size = Vector2i(70, 70)
 0:1/0 = 0
 1:1/0 = 0
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, 35, 18, 35, -2, 24, -24, 13, -35, -7)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, -2, 22, 14, 8, 21, -8, 35, -35, 35)
 4:1/0 = 0
 5:1/0 = 0
 6:1/0 = 0
@@ -77,6 +88,7 @@ texture_region_size = Vector2i(70, 70)
 39:1/0 = 0
 0:2/0 = 0
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -25, -25, -35, 23, -35, 35, -25, 35, 23, 24, 35, -26, 35, -35, 24)
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -120,8 +132,11 @@ texture_region_size = Vector2i(70, 70)
 4:3/0 = 0
 5:3/0 = 0
 6:3/0 = 0
+6:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, -8, -35, -9)
 7:3/0 = 0
+7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, -8, -35, -9)
 8:3/0 = 0
+8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-35, -35, 35, -35, 35, -8, -35, -9)
 9:3/0 = 0
 10:3/0 = 0
 11:3/0 = 0
@@ -1674,4 +1689,6 @@ texture_region_size = Vector2i(70, 70)
 
 [resource]
 tile_size = Vector2i(70, 70)
+physics_layer_0/collision_layer = 1
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_g2hbc")
 sources/0 = SubResource("TileSetAtlasSource_hhvbn")

@@ -1,13 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://d0f21levoa8r3"]
+[gd_scene load_steps=10 format=3 uid="uid://r4vs5oisx6nb"]
 
-[ext_resource type="TileSet" uid="uid://5307m60wu546" path="res://TileSet.tres" id="1_1i3gi"]
-[ext_resource type="Texture2D" uid="uid://y7ne0joyvhf8" path="res://Alien-ofu-pack/PNG/shipGreen_manned.png" id="2_dqtar"]
-[ext_resource type="Texture2D" uid="uid://wokwsajwxq4l" path="res://Alien-ofu-pack/PNG/shipPink_manned.png" id="3_w2evn"]
-[ext_resource type="Texture2D" uid="uid://dr1w127pkyjml" path="res://Alien-ofu-pack/PNG/shipYellow_manned.png" id="4_ape6d"]
-[ext_resource type="Texture2D" uid="uid://dh6wb406bijm6" path="res://pack-industrial/PNG/Default size/platformIndustrial_024.png" id="5_ge684"]
-[ext_resource type="Texture2D" uid="uid://dloun7koabasp" path="res://pack-industrial/PNG/Default size/platformIndustrial_026.png" id="6_fc11b"]
-[ext_resource type="Texture2D" uid="uid://h0d603yb7chg" path="res://pack-industrial/PNG/Default size/platformIndustrial_027.png" id="7_gp7lb"]
-[ext_resource type="Texture2D" uid="uid://6gqvqgdc2kkj" path="res://pack-industrial/PNG/Default size/platformIndustrial_012.png" id="8_s4up1"]
+[ext_resource type="TileSet" uid="uid://5307m60wu546" path="res://TileSet.tres" id="1_rcn58"]
+[ext_resource type="Texture2D" uid="uid://y7ne0joyvhf8" path="res://Alien-ofu-pack/PNG/shipGreen_manned.png" id="2_ee2u8"]
+[ext_resource type="Texture2D" uid="uid://wokwsajwxq4l" path="res://Alien-ofu-pack/PNG/shipPink_manned.png" id="3_i28wa"]
+[ext_resource type="Texture2D" uid="uid://dr1w127pkyjml" path="res://Alien-ofu-pack/PNG/shipYellow_manned.png" id="4_62tc3"]
+[ext_resource type="Texture2D" uid="uid://dh6wb406bijm6" path="res://pack-industrial/PNG/Default size/platformIndustrial_024.png" id="5_2usw4"]
+[ext_resource type="Texture2D" uid="uid://dloun7koabasp" path="res://pack-industrial/PNG/Default size/platformIndustrial_026.png" id="6_34eu8"]
+[ext_resource type="Texture2D" uid="uid://h0d603yb7chg" path="res://pack-industrial/PNG/Default size/platformIndustrial_027.png" id="7_k7wgk"]
+[ext_resource type="Texture2D" uid="uid://6gqvqgdc2kkj" path="res://pack-industrial/PNG/Default size/platformIndustrial_012.png" id="8_i1ex8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dqtar"]
 radius = 41.0488
@@ -26,7 +26,7 @@ offset_bottom = 646.0
 color = Color(0, 0.756863, 0.341176, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource("1_1i3gi")
+tile_set = ExtResource("1_rcn58")
 format = 2
 layer_0/tile_data = PackedInt32Array(524303, 262144, 0, 524302, 262144, 0, 524301, 262144, 0, 524300, 262144, 0, 524299, 262144, 0, 524297, 131072, 0, 524298, 262144, 0, 524296, 131072, 0, 524295, 131072, 0, 524294, 131072, 0, 524293, 131072, 1, 524292, 851968, 0, 524291, 655360, 0, 524290, 655360, 0, 524289, 655360, 0, 524288, 655360, 0, 458767, 393216, 1, 458766, 131072, 0, 393231, 393216, 0, 458765, 131072, 0, 458764, 131072, 0, 458763, 131072, 0, 458761, 131072, 1, 458760, 65536, 2, 393224, 65536, 2, 327688, 65536, 2, 262152, 65536, 2, 262156, 524288, 3, 262155, 458752, 3, 262154, 393216, 3, 393225, 327680, 3, 327689, 327680, 3, 262153, 327680, 3, 327691, 131072, 5, 327692, 196608, 5, 327693, 262144, 5, 262157, 655360, 2, 196620, 65536, 7, 131084, 65536, 6, 196619, 327680, 6, 458757, 196608, 7, 458758, 262144, 7, 458759, 327680, 3, 393223, 327680, 3, 327687, 327680, 3, 262151, 327680, 2, 393216, 131072, 1, 393217, 131072, 0, 393218, 131072, 0, 393219, 131072, 0, 393220, 196608, 1, 458753, 589824, 2, 458754, 589824, 2, 458755, 720896, 1, 327684, 327680, 4, 262144, 393216, 2, 262145, 458752, 2, 262146, 524288, 2, 196609, 786432, 4, 0, 262144, 0, 1, 262144, 0, 2, 262144, 0, 3, 262144, 0, 5, 262144, 0, 6, 262144, 0, 4, 262144, 0, 7, 262144, 0, 9, 262144, 0, 8, 262144, 0, 10, 262144, 0, 11, 262144, 0, 12, 262144, 0, 13, 262144, 0, 14, 262144, 0, 15, 262144, 0, 65537, 720896, 1, 65538, 720896, 1, 65547, 720896, 1, 65543, 720896, 1, 65546, 589824, 2, 65541, 589824, 2, 196608, 720896, 2, 131072, 131072, 4, 131073, 196608, 4, 131074, 262144, 4, 196618, 196608, 3, 16, 262144, 0, 524304, 262144, 0, 458768, 262144, 0, 393232, 131072, 0, 327680, 655360, 5, 131083, 720896, 5, 196621, 786432, 5, 196610, 720896, 0, 131082, 720896, 0, 327696, 65536, 5, 196624, 0, 5, 262160, 0, 6, 458762, 131072, 0)
 
@@ -39,7 +39,7 @@ shape = SubResource("CircleShape2D_dqtar")
 [node name="ShipGreenManned" type="Sprite2D" parent="TileMap/RigidBody2D/CollisionShape2D"]
 position = Vector2(-0.499999, -0.500004)
 scale = Vector2(0.701613, 0.723577)
-texture = ExtResource("2_dqtar")
+texture = ExtResource("2_ee2u8")
 
 [node name="RigidBody2D2" type="RigidBody2D" parent="TileMap"]
 position = Vector2(1160, 299)
@@ -51,7 +51,7 @@ shape = SubResource("CircleShape2D_dqtar")
 [node name="ShipPinkManned" type="Sprite2D" parent="TileMap/RigidBody2D2/CollisionShape2D"]
 position = Vector2(-9.05991e-06, -0.249997)
 scale = Vector2(0.693548, 0.712598)
-texture = ExtResource("3_w2evn")
+texture = ExtResource("3_i28wa")
 
 [node name="RigidBody2D3" type="RigidBody2D" parent="TileMap"]
 position = Vector2(226, 400)
@@ -63,40 +63,40 @@ shape = SubResource("CircleShape2D_dqtar")
 [node name="ShipYellowManned" type="Sprite2D" parent="TileMap/RigidBody2D3/CollisionShape2D"]
 position = Vector2(0, -3.5)
 scale = Vector2(0.709677, 0.768519)
-texture = ExtResource("4_ape6d")
+texture = ExtResource("4_62tc3")
 
 [node name="gosma" type="Sprite2D" parent="."]
 position = Vector2(117, 525)
-texture = ExtResource("5_ge684")
+texture = ExtResource("5_2usw4")
 
 [node name="PlatformIndustrial026" type="Sprite2D" parent="gosma"]
 position = Vector2(64, 0)
-texture = ExtResource("6_fc11b")
+texture = ExtResource("6_34eu8")
 
 [node name="PlatformIndustrial027" type="Sprite2D" parent="gosma/PlatformIndustrial026"]
 position = Vector2(-51, 0)
-texture = ExtResource("7_gp7lb")
+texture = ExtResource("7_k7wgk")
 
 [node name="gosma2" type="Sprite2D" parent="."]
 position = Vector2(393, 105)
-texture = ExtResource("5_ge684")
+texture = ExtResource("5_2usw4")
 
 [node name="PlatformIndustrial026" type="Sprite2D" parent="gosma2"]
 position = Vector2(64, 0)
-texture = ExtResource("6_fc11b")
+texture = ExtResource("6_34eu8")
 
 [node name="PlatformIndustrial027" type="Sprite2D" parent="gosma2/PlatformIndustrial026"]
 position = Vector2(-51, 0)
-texture = ExtResource("7_gp7lb")
+texture = ExtResource("7_k7wgk")
 
 [node name="PlatformIndustrial012" type="Sprite2D" parent="."]
 position = Vector2(383, 596)
-texture = ExtResource("8_s4up1")
+texture = ExtResource("8_i1ex8")
 
 [node name="PlatformIndustrial013" type="Sprite2D" parent="PlatformIndustrial012"]
 position = Vector2(-56, 13)
-texture = ExtResource("8_s4up1")
+texture = ExtResource("8_i1ex8")
 
 [node name="PlatformIndustrial014" type="Sprite2D" parent="PlatformIndustrial012/PlatformIndustrial013"]
 position = Vector2(16, -15)
-texture = ExtResource("8_s4up1")
+texture = ExtResource("8_i1ex8")
