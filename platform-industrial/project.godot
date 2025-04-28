@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Platform-Industrial"
-run/main_scene="res://tilemap.tscn"
+run/main_scene="uid://r4vs5oisx6nb"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
