@@ -1,0 +1,11 @@
+medieval warrior- primeiro passo: criação do cavalheiro
+
+criar uma characterbody2d
+definir um novo pai
+resetar o position scale
+criar um colision shape 2d
+adicionar a origem no pés alterando a posição do sprite;
+diminuir a transparencia do colision shape
+renomear para player
+
+criar uma nova pasta chamada player e add uma cena.
