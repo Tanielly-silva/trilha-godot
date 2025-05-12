@@ -1,0 +1,13 @@
+Passo 1 ajuste da escala do parallaxbackground
+
+dimensõe sky
+1920 x 1080
+
+dimensões de tela
+1152 x 648
+
+dimensões de tela / dimensões sky
+x = 1152/1920 = 0.6
+y = 648/1080 = 0.6
+
+transform > Scale x e y

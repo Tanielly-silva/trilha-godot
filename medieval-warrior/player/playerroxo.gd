@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	var input_vector = Input.get_vector("mover_esquerda", "mover_direita", "mover_cima", "mover_baixo")
 	
+	var deadzone = 0.15
 	if abs(input_vector.x) < 0.15:
 		input_vector.x = 0.0
 	if abs(input_vector.y) < 0.15:
@@ -27,9 +28,9 @@ func _physics_process(delta: float) -> void:
 	var target_velocity = input_vector * speed * 100.0
 	if is_attacking:
 		target_velocity *= 0.25
-
 	velocity = lerp(velocity, target_velocity, 0.05)
 	move_and_slide()
+
 
 	var was_running = is_running
 	is_running = not input_vector.is_zero_approx()
