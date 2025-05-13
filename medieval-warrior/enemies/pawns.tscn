@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://dv65a8ob1ayv8"]
+
+[ext_resource type="Texture2D" uid="uid://fmvx1ve21i7y" path="res://addons/Tiny Swords/Factions/Knights/Troops/Pawn/Red/Pawn_Red.png" id="1_13x4r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_13x4r"]
+radius = 16.0
+height = 36.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ei1y"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(0, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ex7vm"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(192, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oixp8"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(384, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wsrq"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(576, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1rrw"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(768, 192, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwpq1"]
+atlas = ExtResource("1_13x4r")
+region = Rect2(960, 192, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74i12"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ei1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ex7vm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oixp8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wsrq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1rrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwpq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Pawns" type="CharacterBody2D"]
+position = Vector2(438, 182)
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -5)
+shape = SubResource("CapsuleShape2D_13x4r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_74i12")
+autoplay = "default"
+frame_progress = 0.902846

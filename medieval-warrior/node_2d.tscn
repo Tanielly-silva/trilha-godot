@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://0lrtxh5ge855"]
+[gd_scene load_steps=3 format=3 uid="uid://0lrtxh5ge855"]
 
 [ext_resource type="PackedScene" uid="uid://d228nnr7rbm0k" path="res://player/playerroxo.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="2_0e48y"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="playerroxo" parent="." instance=ExtResource("1_wtcfe")]
-position = Vector2(105, 84)
+position = Vector2(448, 151)
+
+[node name="Pawns" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(447, 343)
+
+[node name="Pawns2" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(312, 314)
+
+[node name="Pawns3" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(574, 300)
+
+[node name="Pawns4" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(236, 201)
+
+[node name="Pawns5" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(653, 176)
