@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://d228nnr7rbm0k"]
+[gd_scene load_steps=14 format=3 uid="uid://d228nnr7rbm0k"]
 
 [ext_resource type="Script" uid="uid://08dpicdehult" path="res://player/playerroxo.gd" id="1_rps2h"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_wtl7n"]
-[ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="3_52gwc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h6whe"]
 radius = 17.0
@@ -214,12 +213,3 @@ debug_color = Color(0, 0.6, 0.701961, 0.109804)
 libraries = {
 &"": SubResource("AnimationLibrary_52gwc")
 }
-
-[node name="Pawns" parent="." instance=ExtResource("3_52gwc")]
-position = Vector2(140, 96)
-
-[node name="Pawns2" parent="." instance=ExtResource("3_52gwc")]
-position = Vector2(-3, 165)
-
-[node name="Pawns3" parent="." instance=ExtResource("3_52gwc")]
-position = Vector2(-134, 105)
