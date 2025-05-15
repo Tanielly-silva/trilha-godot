@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 3
+@export var suwod_damage: int = 2
 
 @onready var sprite: Sprite2D = $sprite
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -100,5 +101,14 @@ func attack() -> void:
 	
 	#marcar ataque
 	is_attacking = true	
-			
+	
+	deal_damage_to_anemies()
+	
+	#gerar dano nos inimigos
+func deal_damage_to_anemies() -> void:
+	#acessar os inimigos
+	
+	#chamar
+		
+			pass
 			
