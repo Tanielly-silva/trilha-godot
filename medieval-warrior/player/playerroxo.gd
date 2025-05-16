@@ -90,8 +90,6 @@ func rotate_sprite() -> void:
 func attack() -> void:
 	if is_attacking:
 		return
-	#ataque_side_1 
-	#ataque_siide2
 	
 	#Tocar animação
 	animation_player.play( "ataque_cima-baixo")
@@ -102,13 +100,12 @@ func attack() -> void:
 	#marcar ataque
 	is_attacking = true	
 	
-	deal_damage_to_anemies()
-	
 	#gerar dano nos inimigos
-func deal_damage_to_anemies() -> void:
-	#acessar os inimigos
+func deal_damage_to_enemies() -> void:
 	
-	#chamar
-		
-			pass
+	var enemies = get_tree().get_nodes_in_group("enemyes")
+	for enemy in enemies:
+		enemy.damage(suwod_damage)
+	print("Enemies", enemies.size())
+	pass
 			
