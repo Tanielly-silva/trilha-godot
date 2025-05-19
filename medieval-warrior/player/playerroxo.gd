@@ -5,6 +5,7 @@ extends CharacterBody2D
 
 @onready var sprite: Sprite2D = $sprite
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sword_area: Area2D = $Sword_Area
  
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false 
@@ -25,7 +26,8 @@ func _process(delta: float)-> void:
 			
 	#processar animação e rotação do sprite
 	play_run_idle_animation()
-	rotate_sprite()	
+	if not is_attacking:
+		rotate_sprite()	
 		
 func _physics_process(delta: float) -> void:
 
@@ -102,10 +104,23 @@ func attack() -> void:
 	
 	#gerar dano nos inimigos
 func deal_damage_to_enemies() -> void:
+	var bodies = sword_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("enemyes"):
+			var enemy: Enemy = body
+			var direction_to_enemy = (enemy.position - position).normalized()
+			var attack_direction: Vector2
+			if sprite.flip_h:
+				attack_direction = Vector2.LEFT
+			else:
+				attack_direction = Vector2.RIGHT
+			var dot_product = direction_to_enemy.dot(attack_direction)
+			if dot_product >= 0.3:
+				enemy.damage(suwod_damage)
 	
-	var enemies = get_tree().get_nodes_in_group("enemyes")
-	for enemy in enemies:
-		enemy.damage(suwod_damage)
-	print("Enemies", enemies.size())
+	#var enemies = get_tree().get_nodes_in_group("enemyes")
+	#for enemy in enemies:
+		#enemy.damage(suwod_damage)
+	#print("Enemies", enemies.size())
 	pass
 			
