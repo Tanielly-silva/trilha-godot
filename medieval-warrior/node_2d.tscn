@@ -6,13 +6,34 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="playerroxo" parent="." instance=ExtResource("1_wtcfe")]
-position = Vector2(448, 151)
+position = Vector2(199, 401)
 
 [node name="Pawns" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(1015, 648)
+position = Vector2(1020, 530)
 
 [node name="Pawns2" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(1228, 617)
+position = Vector2(1096, 410)
 
 [node name="Pawns3" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(1126, 584)
+position = Vector2(923, 575)
+
+[node name="Pawns4" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(812, 462)
+
+[node name="Pawns5" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(957, 398)
+
+[node name="Pawns6" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(930, 324)
+
+[node name="Pawns7" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(831, 314)
+
+[node name="Pawns8" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(703, 459)
+
+[node name="Pawns9" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(774, 387)
+
+[node name="Pawns10" parent="." instance=ExtResource("2_0e48y")]
+position = Vector2(1006, 285)
