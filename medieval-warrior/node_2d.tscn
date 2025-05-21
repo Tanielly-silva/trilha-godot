@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://0lrtxh5ge855"]
+[gd_scene load_steps=5 format=3 uid="uid://0lrtxh5ge855"]
 
 [ext_resource type="PackedScene" uid="uid://d228nnr7rbm0k" path="res://player/playerroxo.tscn" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://b1jodf7m08wgj" path="res://enemies/sheep.tscn" id="3_epypp"]
+[ext_resource type="PackedScene" uid="uid://ccq02pgwxymsd" path="res://enemies/goblin.tscn" id="4_0hol4"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,26 +16,23 @@ position = Vector2(1020, 530)
 [node name="Pawns2" parent="." instance=ExtResource("2_0e48y")]
 position = Vector2(1096, 410)
 
-[node name="Pawns3" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(923, 575)
+[node name="Sheep" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(744, 464)
 
-[node name="Pawns4" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(812, 462)
+[node name="Sheep2" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(892, 405)
 
-[node name="Pawns5" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(957, 398)
+[node name="Sheep3" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(1082, 250)
 
-[node name="Pawns6" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(930, 324)
+[node name="Sheep4" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(1014, 373)
 
-[node name="Pawns7" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(831, 314)
+[node name="Goblin" parent="." instance=ExtResource("4_0hol4")]
+position = Vector2(943, 289)
 
-[node name="Pawns8" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(703, 459)
+[node name="Goblin2" parent="." instance=ExtResource("4_0hol4")]
+position = Vector2(813, 279)
 
-[node name="Pawns9" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(774, 387)
-
-[node name="Pawns10" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(1006, 285)
+[node name="Goblin3" parent="." instance=ExtResource("4_0hol4")]
+position = Vector2(1062, 106)

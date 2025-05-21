@@ -1,6 +1,6 @@
 extends Node
 
-@export var speed = 1.0
+@export var speed : float = 1.0
 
 #@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 

@@ -2,11 +2,13 @@ extends CharacterBody2D
 
 @export var speed: float = 3
 @export var suwod_damage: int = 2
+@export var health: int = 100
+@export var death_prefab: PackedScene
 
 @onready var sprite: Sprite2D = $sprite
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $Sword_Area
- 
+@onready var hitbox_area: Area2D = $HitBoxArea2D
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false 
 var was_running: bool = false 
@@ -28,6 +30,9 @@ func _process(delta: float)-> void:
 	play_run_idle_animation()
 	if not is_attacking:
 		rotate_sprite()	
+		
+		#processa dano
+		update_hitbox_detection(delta)
 		
 func _physics_process(delta: float) -> void:
 
@@ -123,4 +128,38 @@ func deal_damage_to_enemies() -> void:
 		#enemy.damage(suwod_damage)
 	#print("Enemies", enemies.size())
 	pass
-			
+	
+func update_hitbox_detection(delta: float) -> void:
+	#Tempo para não receber danos
+	#Frequência(2x por segundo)
+	#HitBoxArea
+	var bodies = hitbox_area.get_overlapping_bodies()
+	for body in bodies:
+		if body.is_in_group("enemyes"):
+			var enemy: Enemy = body
+			var damage_amount = 1
+			damage(damage_amount)
+		
+	pass
+	
+func damage(amount: int) -> void:
+	health -= amount
+	print("Player atingido",amount,". Avida total é", health)
+	
+	#Receber dano
+	modulate = Color.RED
+	var tween = create_tween()
+	tween.set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_QUINT)
+	tween.tween_property(self, "modulate", Color.WHITE, 0.3)
+	
+	if health <= 0:
+		die()
+		
+func die() -> void: 
+	if death_prefab:
+		var death_object = death_prefab.instantiate()
+		death_object.position = position
+		get_parent().add_child(death_object)
+		
+	queue_free()

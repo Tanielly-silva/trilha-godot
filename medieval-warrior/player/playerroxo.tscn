@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d228nnr7rbm0k"]
+[gd_scene load_steps=16 format=3 uid="uid://d228nnr7rbm0k"]
 
 [ext_resource type="Script" uid="uid://08dpicdehult" path="res://player/playerroxo.gd" id="1_rps2h"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_wtl7n"]
@@ -278,7 +278,10 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rps2h"]
-radius = 72.0278
+radius = 124.579
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_52gwc"]
+radius = 43.0
 
 [node name="playerroxo" type="CharacterBody2D"]
 position = Vector2(128, 212)
@@ -305,6 +308,13 @@ libraries = {
 position = Vector2(0, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword_Area"]
-position = Vector2(14, -26)
+position = Vector2(7, -20)
 shape = SubResource("CircleShape2D_rps2h")
 debug_color = Color(0.864218, 0.000607988, 0.866462, 0)
+
+[node name="HitBoxArea2D" type="Area2D" parent="."]
+position = Vector2(0, 30)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea2D"]
+shape = SubResource("CircleShape2D_52gwc")
+debug_color = Color(0.996078, 0, 0.156863, 0)

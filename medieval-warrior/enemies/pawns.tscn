@@ -63,6 +63,7 @@ animations = [{
 position = Vector2(438, 182)
 motion_mode = 1
 script = ExtResource("1_3ei1y")
+health = 6
 death_prefab = ExtResource("2_oixp8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -76,3 +77,4 @@ frame_progress = 0.212125
 
 [node name="follow" type="Node" parent="."]
 script = ExtResource("3_ex7vm")
+speed = 1.3
