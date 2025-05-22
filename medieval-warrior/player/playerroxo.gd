@@ -9,11 +9,13 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $Sword_Area
 @onready var hitbox_area: Area2D = $HitBoxArea2D
+
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false 
 var was_running: bool = false 
 var is_attacking: bool = false
 var attack_cooldown: float = 0.0
+var hitbox_cooldown: float = 0.0
 
 func _process(delta: float)-> void:
 	GameManager.player_position = position
@@ -131,8 +133,13 @@ func deal_damage_to_enemies() -> void:
 	
 func update_hitbox_detection(delta: float) -> void:
 	#Tempo para não receber danos
-	#Frequência(2x por segundo)
-	#HitBoxArea
+	hitbox_cooldown -= delta
+	if hitbox_cooldown > 0: return 
+	
+	#Frequência(1x por segundo)
+	hitbox_cooldown = 0.5
+	
+	#HitBoxArea detecta inimigos
 	var bodies = hitbox_area.get_overlapping_bodies()
 	for body in bodies:
 		if body.is_in_group("enemyes"):
@@ -143,6 +150,7 @@ func update_hitbox_detection(delta: float) -> void:
 	pass
 	
 func damage(amount: int) -> void:
+	if health <=0: return
 	health -= amount
 	print("Player atingido",amount,". Avida total é", health)
 	
@@ -161,5 +169,6 @@ func die() -> void:
 		var death_object = death_prefab.instantiate()
 		death_object.position = position
 		get_parent().add_child(death_object)
+		print("Player morreu")
 		
 	queue_free()

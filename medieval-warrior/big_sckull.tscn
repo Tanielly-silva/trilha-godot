@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn4dluvvuwfwo"]
+
+[ext_resource type="PackedScene" uid="uid://c2oclyltpm0k" path="res://misc/sckull.tscn" id="1_mo5wv"]
+
+[node name="Sckull" instance=ExtResource("1_mo5wv")]
