@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://d228nnr7rbm0k"]
+[gd_scene load_steps=16 format=3 uid="uid://tw04hxoo76cv"]
 
-[ext_resource type="Script" uid="uid://08dpicdehult" path="res://player/playerroxo.gd" id="1_rps2h"]
+[ext_resource type="Script" uid="uid://bdds36s1dep0n" path="res://player/player.gd" id="1_rps2h"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_wtl7n"]
-[ext_resource type="PackedScene" uid="uid://u2hsa76k1kgm" path="res://misc/big_sckull.tscn" id="2_52gwc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h6whe"]
 radius = 17.0
@@ -284,10 +283,9 @@ radius = 124.579
 [sub_resource type="CircleShape2D" id="CircleShape2D_52gwc"]
 radius = 43.0
 
-[node name="playerroxo" type="CharacterBody2D"]
+[node name="playerroxo" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(128, 212)
 script = ExtResource("1_rps2h")
-death_prefab = ExtResource("2_52gwc")
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(0, 31)

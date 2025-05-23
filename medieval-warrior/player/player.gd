@@ -1,8 +1,12 @@
+class_name Player
 extends CharacterBody2D
 
 @export var speed: float = 3
 @export var suwod_damage: int = 2
 @export var health: int = 100
+
+@export var max_health: int = 100
+
 @export var death_prefab: PackedScene
 
 @onready var sprite: Sprite2D = $sprite
@@ -170,5 +174,11 @@ func die() -> void:
 		death_object.position = position
 		get_parent().add_child(death_object)
 		print("Player morreu")
-		
 	queue_free()
+	
+func heal(amount: int) -> int:
+	health += amount
+	if health > max_health:
+		health = max_health
+		print("Player recebeu cura", amount, "A vida agora é", health, max_health)
+	return health

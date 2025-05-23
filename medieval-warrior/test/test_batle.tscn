@@ -1,15 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bdixedab1pqsx"]
 
-[ext_resource type="PackedScene" uid="uid://d228nnr7rbm0k" path="res://player/playerroxo.tscn" id="1_wknxh"]
-[ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="2_nh0ar"]
+[ext_resource type="PackedScene" uid="uid://tw04hxoo76cv" path="res://player/playerroxo.tscn" id="1_wknxh"]
+[ext_resource type="PackedScene" uid="uid://cmcaxmwn254da" path="res://life/meat.tscn" id="2_wknxh"]
 
 [node name="TestBatle" type="Node2D"]
 
 [node name="playerroxo" parent="." instance=ExtResource("1_wknxh")]
 position = Vector2(96, 185)
 
-[node name="Pawns" parent="." instance=ExtResource("2_nh0ar")]
-position = Vector2(702, 256)
-
-[node name="Pawns2" parent="." instance=ExtResource("2_nh0ar")]
-position = Vector2(601, 330)
+[node name="Meat" parent="." instance=ExtResource("2_wknxh")]
+position = Vector2(451, 240)
