@@ -1,0 +1,198 @@
+[gd_scene load_steps=25 format=3 uid="uid://bavuc6kcbq5fd"]
+
+[ext_resource type="Texture2D" uid="uid://bx80ofpuodyhs" path="res://addons/Tiny Swords/UI/Bg_TinySword_Teste.png" id="1_da6ht"]
+[ext_resource type="Texture2D" uid="uid://b4dpvwf32wtlo" path="res://addons/Tiny Swords/UI/logo_TinySword_Teste.png" id="2_qhwe1"]
+[ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="3_stade"]
+[ext_resource type="Texture2D" uid="uid://cc78xewu5lq2p" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="4_qhwe1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhwe1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stade"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6txm0"]
+bg_color = Color(0.733333, 0.580392, 0.0156863, 0.47451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bhosg"]
+bg_color = Color(0.729412, 0.439216, 0.207843, 0.741176)
+border_width_bottom = 1
+border_color = Color(0.729412, 0.439216, 0.207843, 1)
+corner_radius_bottom_left = 1
+
+[sub_resource type="Theme" id="Theme_irt6m"]
+Button/styles/focus = SubResource("StyleBoxFlat_qhwe1")
+Button/styles/hover = SubResource("StyleBoxFlat_stade")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_6txm0")
+Button/styles/normal = SubResource("StyleBoxFlat_bhosg")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6txm0"]
+atlas = ExtResource("3_stade")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhosg"]
+atlas = ExtResource("3_stade")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irt6m"]
+atlas = ExtResource("3_stade")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvlkm"]
+atlas = ExtResource("3_stade")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1o2fj"]
+atlas = ExtResource("3_stade")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjih4"]
+atlas = ExtResource("3_stade")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwwey"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6txm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhosg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_irt6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvlkm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1o2fj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjih4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stade"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iwwey"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt5d1"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xucj3"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aaf77"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15a36"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ciu6x"]
+atlas = ExtResource("4_qhwe1")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6brq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stade")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iwwey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kt5d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xucj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aaf77")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15a36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ciu6x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_da6ht")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -152.0
+offset_right = 168.0
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Logo_jogo" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_qhwe1")
+
+[node name="start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_irt6m")
+text = "START
+"
+
+[node name="quitgame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "QUIT GAME
+"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(392, 363)
+sprite_frames = SubResource("SpriteFrames_iwwey")
+autoplay = "default"
+frame_progress = 0.12897
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(752, 361)
+sprite_frames = SubResource("SpriteFrames_j6brq")
+autoplay = "default"
+frame_progress = 0.845828
+flip_h = true
