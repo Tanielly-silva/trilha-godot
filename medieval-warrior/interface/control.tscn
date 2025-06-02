@@ -1,13 +1,23 @@
-[gd_scene load_steps=25 format=3 uid="uid://bavuc6kcbq5fd"]
+[gd_scene load_steps=34 format=3 uid="uid://bavuc6kcbq5fd"]
 
+[ext_resource type="Script" uid="uid://cd5mtrqdfo2vx" path="res://interface/control.gd" id="1_6txm0"]
 [ext_resource type="Texture2D" uid="uid://bx80ofpuodyhs" path="res://addons/Tiny Swords/UI/Bg_TinySword_Teste.png" id="1_da6ht"]
 [ext_resource type="Texture2D" uid="uid://b4dpvwf32wtlo" path="res://addons/Tiny Swords/UI/logo_TinySword_Teste.png" id="2_qhwe1"]
+[ext_resource type="FontFile" uid="uid://beve1ypl05kaj" path="res://interface/Minecraft.ttf" id="3_6txm0"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="3_stade"]
 [ext_resource type="Texture2D" uid="uid://cc78xewu5lq2p" path="res://addons/Tiny Swords/Factions/Goblins/Troops/Torch/Yellow/Torch_Yellow.png" id="4_qhwe1"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6txm0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhosg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irt6m"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhwe1"]
+bg_color = Color(0.135888, 0.686703, 0.651185, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stade"]
+bg_color = Color(0.933758, 0.368021, 0.609393, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6txm0"]
 bg_color = Color(0.733333, 0.580392, 0.0156863, 0.47451)
@@ -23,10 +33,23 @@ border_color = Color(0.729412, 0.439216, 0.207843, 1)
 corner_radius_bottom_left = 1
 
 [sub_resource type="Theme" id="Theme_irt6m"]
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("3_6txm0")
 Button/styles/focus = SubResource("StyleBoxFlat_qhwe1")
 Button/styles/hover = SubResource("StyleBoxFlat_stade")
 Button/styles/hover_pressed = SubResource("StyleBoxFlat_6txm0")
 Button/styles/normal = SubResource("StyleBoxFlat_bhosg")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nvlkm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_irt6m"]
+bg_color = Color(0.737255, 0.552941, 0.301961, 0.635294)
+
+[sub_resource type="Theme" id="Theme_nvlkm"]
+Button/fonts/font = ExtResource("3_6txm0")
+Button/styles/focus = SubResource("StyleBoxFlat_irt6m")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1o2fj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6txm0"]
 atlas = ExtResource("3_stade")
@@ -142,6 +165,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_6txm0")
 
 [node name="BG" type="TextureRect" parent="."]
 layout_mode = 0
@@ -173,16 +197,37 @@ layout_mode = 2
 layout_mode = 2
 texture = ExtResource("2_qhwe1")
 
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_6txm0")
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_bhosg")
+
+[node name="HSeparator3" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_irt6m")
+
 [node name="start" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = SubResource("Theme_irt6m")
 text = "START
 "
 
+[node name="HSeparator4" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_nvlkm")
+
 [node name="quitgame" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
+theme = SubResource("Theme_nvlkm")
 text = "QUIT GAME
 "
+
+[node name="HSeparator5" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxEmpty_1o2fj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(392, 363)
@@ -196,3 +241,6 @@ sprite_frames = SubResource("SpriteFrames_j6brq")
 autoplay = "default"
 frame_progress = 0.845828
 flip_h = true
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/quitgame" to="." method="_on_quitgame_pressed"]
