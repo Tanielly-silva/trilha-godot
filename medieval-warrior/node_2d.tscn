@@ -1,9 +1,11 @@
-[gd_scene load_steps=54 format=3 uid="uid://0lrtxh5ge855"]
+[gd_scene load_steps=69 format=3 uid="uid://0lrtxh5ge855"]
 
+[ext_resource type="Texture2D" uid="uid://co1dt0dkbiaiu" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="1_2u7jv"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_ebxd8"]
 [ext_resource type="Texture2D" uid="uid://cuem03jxxetu1" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://tw04hxoo76cv" path="res://player/playerroxo.tscn" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="2_0e48y"]
+[ext_resource type="FontFile" uid="uid://beve1ypl05kaj" path="res://interface/Minecraft.ttf" id="2_24dk6"]
 [ext_resource type="Texture2D" uid="uid://b0tjf3nk1xaow" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://kp07d2ioqul2" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" id="3_epypp"]
 [ext_resource type="PackedScene" uid="uid://ccq02pgwxymsd" path="res://enemies/goblin.tscn" id="4_0hol4"]
@@ -30,14 +32,105 @@
 [ext_resource type="PackedScene" uid="uid://b1jodf7m08wgj" path="res://enemies/sheep.tscn" id="27_1fr6y"]
 [ext_resource type="PackedScene" uid="uid://coih5mrx67nws" path="res://interface/pause_menu.tscn" id="28_2hxjc"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_2u7jv"]
-frames = 6
-frame_0/texture = ExtResource("1_ebxd8")
-frame_1/duration = 1.0
-frame_2/duration = 1.0
-frame_3/duration = 1.0
-frame_4/duration = 1.0
-frame_5/duration = 1.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_mryly"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kq1c5"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ornx7"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnnru"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_540hr"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ip5v"]
+atlas = ExtResource("1_2u7jv")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q5dlx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mryly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kq1c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ornx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnnru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_540hr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ip5v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24dk6"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5dlx"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4wnb"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7plk7"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbwgr"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mj2a"]
+atlas = ExtResource("1_ebxd8")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fshgd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24dk6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5dlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4wnb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7plk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbwgr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mj2a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d21ai"]
 texture = ExtResource("2_kdubu")
@@ -1542,27 +1635,92 @@ position = Vector2(-3, -18)
 
 [node name="Control" type="Control" parent="HUD"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="icones" type="HBoxContainer" parent="HUD/Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="icone_personagem" type="TextureRect" parent="HUD/Control/icones"]
+[node name="carne" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+custom_minimum_size = Vector2(0, 55)
 layout_mode = 2
-texture = SubResource("AnimatedTexture_2u7jv")
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="vidas_personagem" type="Label" parent="HUD/Control/icones"]
+[node name="anim_carne" type="AnimatedSprite2D" parent="HUD/Control/MarginContainer/carne"]
+position = Vector2(32, 37)
+scale = Vector2(0.832031, 0.800781)
+sprite_frames = SubResource("SpriteFrames_q5dlx")
+autoplay = "default"
+frame_progress = 0.577964
+
+[node name="separador_carne" type="Label" parent="HUD/Control/MarginContainer/carne"]
+custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "x"
+horizontal_alignment = 2
+
+[node name="contador_carne" type="Label" parent="HUD/Control/MarginContainer/carne"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "00"
+
+[node name="vidas" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="vida_player" type="AnimatedSprite2D" parent="HUD/Control/MarginContainer/vidas"]
+position = Vector2(19, 43)
+scale = Vector2(0.832031, 0.800781)
+sprite_frames = SubResource("SpriteFrames_fshgd")
+autoplay = "default"
+frame_progress = 0.372045
+flip_h = true
+
+[node name="separador_carne" type="Label" parent="HUD/Control/MarginContainer/vidas"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "x"
+horizontal_alignment = 2
+
+[node name="contador_carne" type="Label" parent="HUD/Control/MarginContainer/vidas"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "00"
 
 [node name="pause_MENU" parent="." instance=ExtResource("28_2hxjc")]
 visible = false
 
 [node name="bs_mar" type="Sprite2D" parent="."]
-position = Vector2(560, 334)
+position = Vector2(703, 398)
 scale = Vector2(27.84, 21.84)
 texture = ExtResource("1_q6r6c")
 
@@ -1593,7 +1751,7 @@ layer_10/name = "cogumelogrande10"
 layer_10/tile_data = PackedInt32Array(1572941, 21, 1, 1638477, 21, 2, 1507406, 65557, 0, 1572942, 65557, 1, 1638478, 65557, 2, 1507407, 131093, 0, 1572943, 131093, 1, 1638479, 131093, 2, 1245268, 21, 1, 1310804, 21, 2, 1179733, 65557, 0, 1245269, 65557, 1, 1310805, 65557, 2, 1376341, 65557, 3, 1179734, 131093, 0, 1245270, 131093, 1, 1310806, 131093, 2, 1376342, 131093, 3, 2490436, 21, 1, 2555972, 21, 2, 2424901, 65557, 0, 2490437, 65557, 1, 2555973, 65557, 2, 2621509, 65557, 3, 2424902, 131093, 0, 2490438, 131093, 1, 2555974, 131093, 2, 2621510, 131093, 3, 2490439, 196629, 1, 2555975, 196629, 2, 2424877, 21, 1, 2490413, 21, 2, 2359342, 65557, 0, 2424878, 65557, 1, 2490414, 65557, 2, 2359343, 131093, 0, 2424879, 131093, 1, 2490415, 131093, 2, 2424880, 196629, 1, 2490416, 196629, 2, 3014690, 21, 1, 3080226, 21, 2, 2949155, 65557, 0, 3014691, 65557, 1, 3080227, 65557, 2, 3145763, 65557, 3, 2949156, 131093, 0, 3014692, 131093, 1, 3080228, 131093, 2, 3145764, 131093, 3, 2293761, 21, 1, 2359297, 21, 2, 2228226, 65557, 0, 2293762, 65557, 1, 2359298, 65557, 2, 2424834, 65557, 3, 2228227, 131093, 0, 2293763, 131093, 1, 2359299, 131093, 2, 2424835, 131093, 3, 2293764, 196629, 1, 2359300, 196629, 2, 1572868, 21, 1, 1638404, 21, 2, 1507333, 65557, 0, 1572869, 65557, 1, 1638405, 65557, 2, 1703941, 65557, 3, 1507334, 131093, 0, 1572870, 131093, 1, 1638406, 131093, 2, 1703942, 131093, 3)
 
 [node name="playerroxo" parent="." instance=ExtResource("1_wtcfe")]
-position = Vector2(613, 64)
+position = Vector2(418, 268)
 
 [node name="Goblin" parent="." instance=ExtResource("4_0hol4")]
 position = Vector2(807, 421)
