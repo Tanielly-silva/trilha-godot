@@ -1,14 +1,13 @@
-[gd_scene load_steps=69 format=3 uid="uid://0lrtxh5ge855"]
+[gd_scene load_steps=68 format=3 uid="uid://0lrtxh5ge855"]
 
 [ext_resource type="Texture2D" uid="uid://co1dt0dkbiaiu" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="1_2u7jv"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_ebxd8"]
+[ext_resource type="Script" uid="uid://cjo0eoebk6sfp" path="res://control.gd" id="1_mryly"]
 [ext_resource type="Texture2D" uid="uid://cuem03jxxetu1" path="res://addons/Tiny Swords/Terrain/Water/Water.png" id="1_q6r6c"]
 [ext_resource type="PackedScene" uid="uid://tw04hxoo76cv" path="res://player/playerroxo.tscn" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://dv65a8ob1ayv8" path="res://enemies/pawns.tscn" id="2_0e48y"]
 [ext_resource type="FontFile" uid="uid://beve1ypl05kaj" path="res://interface/Minecraft.ttf" id="2_24dk6"]
 [ext_resource type="Texture2D" uid="uid://b0tjf3nk1xaow" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Flat.png" id="2_kdubu"]
 [ext_resource type="Texture2D" uid="uid://kp07d2ioqul2" path="res://addons/Tiny Swords/Terrain/Ground/Tilemap_Elevation.png" id="3_epypp"]
-[ext_resource type="PackedScene" uid="uid://ccq02pgwxymsd" path="res://enemies/goblin.tscn" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bujk3cq16brpa" path="res://addons/Tiny Swords/Deco/14.png" id="4_e8dv2"]
 [ext_resource type="Texture2D" uid="uid://dk5yr40l605qd" path="res://addons/Tiny Swords/Deco/13.png" id="5_2nhjh"]
 [ext_resource type="Texture2D" uid="uid://c10hd5wnfd5fa" path="res://addons/Tiny Swords/Deco/12.png" id="6_bjha6"]
@@ -1640,6 +1639,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mryly")
 
 [node name="MarginContainer" type="MarginContainer" parent="HUD/Control"]
 layout_mode = 1
@@ -1707,7 +1707,33 @@ theme_override_font_sizes/font_size = 20
 text = "x"
 horizontal_alignment = 2
 
-[node name="contador_carne" type="Label" parent="HUD/Control/MarginContainer/vidas"]
+[node name="contador_VIDAS" type="Label" parent="HUD/Control/MarginContainer/vidas"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "00"
+
+[node name="tempo" type="HBoxContainer" parent="HUD/Control/MarginContainer"]
+custom_minimum_size = Vector2(0, 55)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="contador" type="Label" parent="HUD/Control/MarginContainer/tempo"]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_24dk6")
+theme_override_font_sizes/font_size = 20
+text = "TEMPO: "
+horizontal_alignment = 2
+
+[node name="contagem_tempo" type="Label" parent="HUD/Control/MarginContainer/tempo"]
 custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_vertical = 8
@@ -1753,11 +1779,14 @@ layer_10/tile_data = PackedInt32Array(1572941, 21, 1, 1638477, 21, 2, 1507406, 6
 [node name="playerroxo" parent="." instance=ExtResource("1_wtcfe")]
 position = Vector2(418, 268)
 
-[node name="Goblin" parent="." instance=ExtResource("4_0hol4")]
-position = Vector2(807, 421)
-
-[node name="Pawns" parent="." instance=ExtResource("2_0e48y")]
-position = Vector2(657, 379)
-
 [node name="Sheep" parent="." instance=ExtResource("27_1fr6y")]
 position = Vector2(920, 344)
+
+[node name="Sheep2" parent="." instance=ExtResource("27_1fr6y")]
+position = Vector2(815, 384)
+
+[node name="Sheep3" parent="." instance=ExtResource("27_1fr6y")]
+position = Vector2(834, 437)
+
+[node name="Sheep4" parent="." instance=ExtResource("27_1fr6y")]
+position = Vector2(591, 380)

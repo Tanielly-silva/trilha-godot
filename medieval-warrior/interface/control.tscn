@@ -1,6 +1,6 @@
 [gd_scene load_steps=34 format=3 uid="uid://bavuc6kcbq5fd"]
 
-[ext_resource type="Script" uid="uid://cd5mtrqdfo2vx" path="res://interface/control.gd" id="1_6txm0"]
+[ext_resource type="Script" uid="uid://cub1runp0520d" path="res://interface/menu.gd" id="1_6txm0"]
 [ext_resource type="Texture2D" uid="uid://bx80ofpuodyhs" path="res://addons/Tiny Swords/UI/Bg_TinySword_Teste.png" id="1_da6ht"]
 [ext_resource type="Texture2D" uid="uid://b4dpvwf32wtlo" path="res://addons/Tiny Swords/UI/logo_TinySword_Teste.png" id="2_qhwe1"]
 [ext_resource type="FontFile" uid="uid://beve1ypl05kaj" path="res://interface/Minecraft.ttf" id="3_6txm0"]

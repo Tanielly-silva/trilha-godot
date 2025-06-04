@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="medieval-warrior"
-run/main_scene="uid://0lrtxh5ge855"
+run/main_scene="uid://bavuc6kcbq5fd"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameManager="*res://game/game_manager.gd"
+Globals="*res://game/globals.gd"
 
 [input]
 
