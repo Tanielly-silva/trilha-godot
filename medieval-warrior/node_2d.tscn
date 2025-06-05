@@ -1742,6 +1742,10 @@ theme_override_fonts/font = ExtResource("2_24dk6")
 theme_override_font_sizes/font_size = 20
 text = "00"
 
+[node name="clock_timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [node name="pause_MENU" parent="." instance=ExtResource("28_2hxjc")]
 visible = false
 
@@ -1790,3 +1794,5 @@ position = Vector2(834, 437)
 
 [node name="Sheep4" parent="." instance=ExtResource("27_1fr6y")]
 position = Vector2(591, 380)
+
+[connection signal="timeout" from="clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]
