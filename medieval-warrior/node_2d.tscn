@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=3 uid="uid://0lrtxh5ge855"]
+[gd_scene load_steps=69 format=3 uid="uid://0lrtxh5ge855"]
 
 [ext_resource type="Texture2D" uid="uid://co1dt0dkbiaiu" path="res://addons/Tiny Swords/Resources/Resources/M_Spawn.png" id="1_2u7jv"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_ebxd8"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://ccc8bupnhpw0a" path="res://addons/Tiny Swords/Deco/15.png" id="23_7mj2a"]
 [ext_resource type="PackedScene" uid="uid://b1jodf7m08wgj" path="res://enemies/sheep.tscn" id="27_1fr6y"]
 [ext_resource type="PackedScene" uid="uid://coih5mrx67nws" path="res://interface/pause_menu.tscn" id="28_2hxjc"]
+[ext_resource type="AudioStream" uid="uid://do6drq36dq2w1" path="res://music_efx/gb_fundo_efx.mp3" id="31_24dk6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mryly"]
 atlas = ExtResource("1_2u7jv")
@@ -1794,5 +1795,10 @@ position = Vector2(834, 437)
 
 [node name="Sheep4" parent="." instance=ExtResource("27_1fr6y")]
 position = Vector2(591, 380)
+
+[node name="bg_musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("31_24dk6")
+autoplay = true
+parameters/looping = true
 
 [connection signal="timeout" from="clock_timer" to="HUD/Control" method="_on_clock_timer_timeout"]

@@ -13,6 +13,9 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_area: Area2D = $Sword_Area
 @onready var hitbox_area: Area2D = $HitBoxArea2D
+@onready var caminhada_efx: AudioStreamPlayer = $caminhada_efx
+@onready var attack_efx: AudioStreamPlayer = $attack_efx
+
 
 var input_vector: Vector2 = Vector2(0,0)
 var is_running: bool = false 
@@ -90,9 +93,10 @@ func play_run_idle_animation() -> void:
 		if was_running != is_running:
 			if is_running:
 				animation_player.play("run")
+				caminhada_efx.play()
 			else:
 				animation_player.play("idle")		
-			
+				caminhada_efx.stop()
 func rotate_sprite() -> void:
 		# Girar o sprite 	
 	if input_vector.x > 0:
@@ -106,6 +110,7 @@ func attack() -> void:
 	
 	#Tocar animação
 	animation_player.play( "ataque_cima-baixo")
+	attack_efx.play()
 	
 	#confirmar temporizazador 		
 	attack_cooldown = 0.6

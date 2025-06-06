@@ -1,7 +1,9 @@
-[gd_scene load_steps=16 format=3 uid="uid://tw04hxoo76cv"]
+[gd_scene load_steps=18 format=3 uid="uid://tw04hxoo76cv"]
 
 [ext_resource type="Script" uid="uid://bdds36s1dep0n" path="res://player/player.gd" id="1_rps2h"]
 [ext_resource type="Texture2D" uid="uid://c4jrqj3mppc31" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_wtl7n"]
+[ext_resource type="AudioStream" uid="uid://b63fot71fkttl" path="res://music_efx/passo.mp3" id="3_52gwc"]
+[ext_resource type="AudioStream" uid="uid://o1r1gpl8cfmd" path="res://music_efx/Attack_efx.wav" id="4_t7n30"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h6whe"]
 radius = 17.0
@@ -320,3 +322,12 @@ shape = SubResource("CircleShape2D_52gwc")
 debug_color = Color(0.996078, 0, 0.156863, 0)
 
 [node name="Camera2D" type="Camera2D" parent="HitBoxArea2D"]
+
+[node name="caminhada_efx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_52gwc")
+volume_db = 16.714
+parameters/looping = true
+
+[node name="attack_efx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t7n30")
+volume_db = 24.0
